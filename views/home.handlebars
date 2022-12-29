@@ -1,0 +1,32 @@
+<body>
+    <ul >
+        <li>
+            {{#if loggedInUser.username}}
+                <p id="user">Welcome, {{loggedInUser.username}}</p>
+            {{/if}}
+            
+        </li>
+    </ul>
+    <ul id="operation">
+        <li><a href="/addStock">Add Stock</a></li>
+        <li>
+            <a href="/logout">Log out</a>
+        </li>
+    </ul>
+
+    <ul id="items">
+        {{#each data}}
+        <div id="content">
+                <li>Name: {{this.name}}</li>
+                <li><img src="/stockImg/{{this.photo}}" style="height: 200px;"></li>
+
+
+                <li>Barcode: {{this.barcode}}</li>
+                <li>£ {{this.price}}</li>
+                
+                <li>stock level: {{this.quanity}}</li>
+                <li>last updated stock: {{this.added}} by {{this.creator}}</li>
+         </div>   
+            {{/each}}
+    </ul>
+</body>

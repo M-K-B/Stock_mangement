@@ -1,0 +1,24 @@
+<body>
+		<header>
+		<h1>Create an Account</h1>
+		<ul><li><a href="/login">Log in</a></li></ul>
+		</header>
+		<main>
+		<form action="/register" method="post">
+			<p>
+				<label for="user">Username</label><br />
+				<input type="text" name="username" placeholder="your preferred username" value="{{body.user}}">
+			</p>
+			<p>
+				<label for="pass">Password</label><br />
+				<input type="password" name="password" placeholder="your chosen password">
+			</p>
+			
+			<p><input type="submit" value="Create"></p>
+			
+		</form>
+		{{#if message}}
+			{{message}}
+			{{/if}} 
+		</main>
+</body>

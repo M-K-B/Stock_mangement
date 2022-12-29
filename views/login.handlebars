@@ -1,0 +1,24 @@
+<body>
+    <header>
+		<h1>LOGIN PAGE</h1>
+		<ul><li><a href="/register">Register</a></li></ul>
+		</header>
+		<main>
+
+		<h1 style="color:black;">Log In</h1>
+		<form action="/login" method="post">
+			<p>
+				<label for="user">Username</label><br />
+				<input type="text" name="username" placeholder="your username" value="{{body.user}}" autofocus>
+			</p>
+			<p>
+				<label for="pass">Password</label><br />
+				<input type="password" name="password" placeholder="your password" value="{{body.pass}}">
+			</p>
+			<p><input type="submit" value="Log in"></p>
+		</form>
+
+		{{#if message}}
+			{{message}}
+		{{/if}}
+</body>

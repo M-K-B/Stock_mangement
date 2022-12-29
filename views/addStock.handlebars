@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Home Page</title>
+		<meta name="description" content="form to add new books">
+		<meta name="author" content="Mark Tyers">
+		<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+		<link href="/style.css" type="text/css" rel="stylesheet" />
+		<link href="/formValid.css" type="text/css" rel="stylesheet" />
+		<script type="module" src="/main.js"></script>
+		
+	</head>
+	<body>
+		<header id='event'  >
+		<h1>Add Stock</h1>
+		
+		<ul>
+            <li>
+            <a href="/">Home</a>
+        </li>
+        </ul>
+		</header>
+	<main>
+            
+		<div id="form">
+		<form action="/addStock"  method="post" enctype="multipart/form-data">
+			<p>
+				<label for="name">Item Name</label><br />
+				<input type="text" name="name" placeholder="Item Name" value="" required autofocus>
+			</p>
+			<p>
+				<label for="image">Image of the item</label><br />
+				<input type="file" id="image" name="image" accept="image/*" >
+				<img src="" style="width: 100px; height: 100px;">
+			</p>
+
+			<p>
+				<label for="barcode">Aisle</label><br />
+				<input type="tel" minlength="10" size="10" maxlength="10" name="barcode" placeholder="barcode" required>
+			</p>
+
+			<p>
+				<label for="aisle">Location</label><br />
+				<input type="tel" minlength="2" size="2" maxlength="2" name="aisle" placeholder="aisle number" required>
+			</p>
+
+			<p>
+				
+				<label for="location">barcode</label><br />
+				
+				<input type="tel" minlength="2" size="2" maxlength="2" name="location" placeholder="location number" required>
+				
+			</p>
+			<p>
+				<label for="price">Retail Price</label><br />
+				<input type="number" minlength="1" size="2" maxlength="9" name="price" placeholder="price" required>
+                
+			</p>
+
+        <div id="slider">
+			
+				<label for="quanity">Stock Quanity</label><br />
+				<input type="range" min="1" max="100" name="quanity" value="1" oninput="this.nextElementSibling.value = this.value" required>
+                <output>1<output>
+				</p>
+                <br/>
+        </div>
+
+        <div id="submit">
+			<input type="submit" value="Add stock">
+        </div>
+		</form>
+
+		{{#if err}}
+			{{err}}
+		{{/if}}	
+            
+		</div>
+
+        <script src="/main.js"></script>
+		
+	</main>
+	</body>
+</html>
+
+

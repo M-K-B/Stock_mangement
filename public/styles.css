@@ -1,0 +1,24 @@
+body{
+    background-color: aquamarine;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+#user{
+    font-size: 50px;
+}
+
+ul#operation{
+    font-size: 35px;
+    position: relative;
+    display: inline-block;
+}
+
+#content{
+    background-color: grey;
+    justify-content: center;
+}
